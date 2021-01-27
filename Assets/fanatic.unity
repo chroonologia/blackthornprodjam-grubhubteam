@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1093f3fb5775bd46bb0a22f51fde578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatText: {fileID: 487950851}
   Collider: {fileID: 183272143}
+  Textbool: {fileID: 487950851}
 --- !u!60 &183272141
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 487950854}
   - component: {fileID: 487950853}
   - component: {fileID: 487950852}
+  - component: {fileID: 487950855}
   m_Layer: 0
   m_Name: FloatText
   m_TagString: Untagged
@@ -342,6 +343,19 @@ Transform:
   m_Father: {fileID: 183272143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &487950855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487950851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975b8d0f011f5844d9a7b892d092742a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextRendered: {fileID: 487950853}
 --- !u!1 &661722179
 GameObject:
   m_ObjectHideFlags: 0

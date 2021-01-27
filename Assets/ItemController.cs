@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    public GameObject FloatText;
     public Transform Collider;
+    public GameObject Textbool;
+    private TextMRender bool_script;
+    
+
     private void Start()
     {
-        
+        bool_script = Textbool.GetComponent<TextMRender>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            if(FloatText != null)
-            {
-                Instantiate(FloatText, Collider.position, Collider.rotation);
-            }
-            Debug.Log("Player can now pick up this item!");
+            bool_script.TextRendered.GetComponent<Renderer>().enabled = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        bool_script.TextRendered.GetComponent<Renderer>().enabled = false;
     }
 }
